@@ -1,0 +1,60 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+  {
+    "name": "Castanets debug - Browser Process",
+    "type": "cppdbg",
+    "request": "launch",
+    "targetArchitecture": "x64",
+    "program": "${workspaceRoot}/out/debug/chrome",
+    "args": [],  // Optional command line args
+    // "preLaunchTask": "1-build_chrome_debug",
+    "stopAtEntry": false,
+    "cwd": "${workspaceRoot}/out/debug/",
+    "environment": [],
+    // "externalConsole": true
+  },
+  {
+    "name": "Castanets debug - Renderer Process",
+    "type": "cppdbg",
+    "request": "launch",
+    "targetArchitecture": "x64",
+    "program": "${workspaceRoot}/out/debug/chrome",
+    // Optional command line args
+    "args": ["--type=renderer --server-address=127.0.0.1"],
+    // "preLaunchTask": "1-build_chrome_debug",
+    "stopAtEntry": false,
+    "cwd": "${workspaceRoot}/out/debug/",
+    "environment": [],
+    // "externalConsole": true
+  },
+  {
+    "name": "Castanets release - Browser Process",
+    "type": "cppdbg",
+    "request": "launch",
+    "targetArchitecture": "x64",
+    "program": "${workspaceRoot}/out/release/chrome",
+    // Optional command line args
+    "args": [],
+    // "preLaunchTask": "2-build_chrome_release",
+    "stopAtEntry": false,
+    "cwd": "${workspaceRoot}/out/release/",
+    "environment": [],
+    // "externalConsole": true
+  },
+  {
+    "name": "Castanets release - Renderer Process",
+    "type": "cppdbg",
+    "request": "launch",
+    "targetArchitecture": "x64",
+    "program": "${workspaceRoot}/out/release/chrome",
+    // Optional command line args
+    "args": ["--type=renderer --server-address=127.0.0.1"],
+    // "preLaunchTask": "2-build_chrome_release",
+    "stopAtEntry": false,
+    "cwd": "${workspaceRoot}/out/release/",
+    "environment": [],
+    // "externalConsole": true
+  },
+  ]
+}
